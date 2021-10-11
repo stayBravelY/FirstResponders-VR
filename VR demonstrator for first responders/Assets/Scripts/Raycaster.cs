@@ -16,7 +16,7 @@ public class Raycaster : MonoBehaviour
             print(hit.collider.gameObject.name);
         }else
         {
-            Debug.DrawLine (ray.origin, ray.origin + ray.direction * 100, Color.blue);
+            Debug.DrawLine (ray.origin, ray.origin + ray.direction * 10, Color.blue);
         }
        
 
