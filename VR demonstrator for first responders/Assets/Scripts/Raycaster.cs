@@ -18,10 +18,7 @@ public class Raycaster : MonoBehaviour
             print(hit.collider.gameObject.name);
             RaycastObj = hit.collider.gameObject;
             
-            if (Input.GetKeyDown("e")) {
-                Debug.Log("You've interacted with it");
-                RaycastObj.SetActive(false);
-            }
+         
         }else
         {
             Debug.DrawLine (ray.origin, ray.origin + ray.direction * 10, Color.blue);
