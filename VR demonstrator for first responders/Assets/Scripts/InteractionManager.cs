@@ -18,6 +18,7 @@ public class InteractionManager : MonoBehaviour
             var selectionRenderer = _selection.GetComponent<Renderer>();
             selectionRenderer.material = defaultMaterial;
             _selection = null;
+            objectname.text = null;
         }
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -34,9 +35,6 @@ public class InteractionManager : MonoBehaviour
                 }
                 _selection = selection;
                 
-            }
-            else {
-                objectname.text = null;
             }
             
         }    
