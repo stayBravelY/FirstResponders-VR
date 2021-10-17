@@ -21,7 +21,7 @@ public class InteractionManager : MonoBehaviour
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit)){
+        if (Physics.Raycast(ray, out hit, 5)){
             var selection = hit.transform;
 
             if (selection.CompareTag(interactableTag)){
