@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 104558423}
   - component: {fileID: 104558422}
   - component: {fileID: 104558428}
+  - component: {fileID: 104558429}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Interactable
@@ -315,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104558421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.341439, y: 4.688, z: 6.786251}
+  m_LocalPosition: {x: -13.341439, y: 4.688, z: 25.18}
   m_LocalScale: {x: 1.7437, y: 1.0467529, z: 2.4302}
   m_Children:
   - {fileID: 1394190992}
@@ -335,6 +336,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InfoBox: {fileID: 1394190992}
+--- !u!114 &104558429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104558421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1991440154}
+          m_TargetAssemblyTypeName: GazeTimer, Assembly-CSharp
+          m_MethodName: GazeOn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1991440154}
+          m_TargetAssemblyTypeName: GazeTimer, Assembly-CSharp
+          m_MethodName: GazeOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &153868896
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514408647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.296301, y: 0.71901906, z: 0.20673823}
+  m_LocalPosition: {x: -2.296301, y: 0.71901906, z: 25.25}
   m_LocalScale: {x: 3.1192882, y: 0.74356973, z: 5.1776175}
   m_Children: []
   m_Father: {fileID: 406275342}
@@ -920,7 +966,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -2355,7 +2401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509064241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1036997, y: 1.64, z: 0.2}
+  m_LocalPosition: {x: 2.1036997, y: 1.64, z: 24.42}
   m_LocalScale: {x: 6, y: 3.4758, z: 6}
   m_Children: []
   m_Father: {fileID: 406275342}
@@ -3065,6 +3111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991440153}
+  - component: {fileID: 1991440154}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3090,6 +3137,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 83.895, z: 0}
+--- !u!114 &1991440154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991440152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7e81dd16333aa489809f3c666fcffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 681076124}
+  totalTime: 2
 --- !u!1 &2039384960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,7 +3181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039384960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.931, y: 7.93, z: 1.2095127}
+  m_LocalPosition: {x: -6.931, y: 7.93, z: 24.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1658534573}
