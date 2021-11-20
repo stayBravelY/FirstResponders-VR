@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class InfoManager : MonoBehaviour
 {
     const float SPEED = 6f;

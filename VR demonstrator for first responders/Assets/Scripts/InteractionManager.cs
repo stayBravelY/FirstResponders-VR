@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InteractionManager : MonoBehaviour
 {
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private string interactableTag = "Interactable";
-    [SerializeField] private Text objectname;
+    [SerializeField] private TextMeshProUGUI objectname;
     private Transform _selection;
     // Update is called once per frame
     
