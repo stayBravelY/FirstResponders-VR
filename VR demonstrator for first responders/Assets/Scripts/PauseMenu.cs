@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pasueMenuUI;
     public GameObject mainUI;
+    
     // Start is called before the first frame update
  
 
@@ -18,13 +19,17 @@ public class PauseMenu : MonoBehaviour
         {   
             if (GamePaused)
             {
-                
+                Cursor.lockState = CursorLockMode.None;
                 Resume();
             }else
-            {
+            {   
+               // Cursor.lockState = CursorLockMode.Locked;
                 Pause();
             }
         }
+       
+            Cursor.lockState = CursorLockMode.Locked;
+
     }
    public void Resume()
     {
