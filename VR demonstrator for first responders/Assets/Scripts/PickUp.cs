@@ -15,7 +15,7 @@ public class PickUp : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Rigidbody>().useGravity = false;
         this.transform.position = pick.position;
-        this.transform.parent = GameObject.Find("Pickobject").transform;
+        this.transform.parent = GameObject.Find("PickObject").transform;
         }
     }
     

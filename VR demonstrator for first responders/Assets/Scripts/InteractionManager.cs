@@ -10,6 +10,7 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private string interactableTag = "Interactable";
     [SerializeField] private TextMeshProUGUI objectname;
+    //[SerializeField] private Image detailsImage;
     private Transform _selection;
     // Update is called once per frame
     
@@ -33,6 +34,7 @@ public class InteractionManager : MonoBehaviour
                 if (selectionRenderer != null){
                     selectionRenderer.material = highlightMaterial;
                     objectname.text = selection.gameObject.name;
+                    //detailsImage = selection.gameObject.GetComponent<Image>();
                 }
                 _selection = selection;
                 
