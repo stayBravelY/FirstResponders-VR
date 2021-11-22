@@ -8,9 +8,11 @@ public class Raycaster : MonoBehaviour
 {
     private GameObject RaycastObj;
     List<InfoManager> infos = new List<InfoManager>();
+    List<DetailsManager> details = new List<DetailsManager>();
 
     void Start() {
         infos = FindObjectsOfType<InfoManager>().ToList();
+        details = FindObjectsOfType<DetailsManager>().ToList();
     }
     void Update()
     {
@@ -25,6 +27,7 @@ public class Raycaster : MonoBehaviour
             GameObject go = hit.collider.gameObject;
             if (go.CompareTag("Interactable")){
                 OpenInfo(go.GetComponent<InfoManager>());
+                OpenDetail(go.GetComponent<DetailsManager>());
             }
             
         }else
@@ -50,7 +53,24 @@ public class Raycaster : MonoBehaviour
         foreach (InfoManager info in infos) {
             info.CloseInfo();
         }
+        foreach (DetailsManager detail in details){
+            detail.hideDetails();
+        }
+
     }
+
+    void OpenDetail(DetailsManager desiredDetail){
+        foreach (DetailsManager detail in details) {
+            if (detail == desiredDetail){
+                detail.showDetails();
+            }
+            else{
+                detail.hideDetails();
+            }
+        }
+    }
+
+    
 
         
 

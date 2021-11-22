@@ -8,8 +8,7 @@ public class InfoManager : MonoBehaviour
     const float SPEED = 6f;
     [SerializeField]
     Transform InfoBox;
-    [SerializeField]
-    GameObject details;
+    
 
     Vector3 ChangedScale = Vector3.zero;
 
@@ -22,10 +21,10 @@ public class InfoManager : MonoBehaviour
 
     public void OpenInfo(){
         ChangedScale = Vector3.one;
-        details.SetActive(true);
+        
     }
     public void CloseInfo(){
         ChangedScale = Vector3.zero;
-        details.SetActive(false);
+        
     }
 }
