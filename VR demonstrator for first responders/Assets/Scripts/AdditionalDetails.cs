@@ -13,15 +13,17 @@ public class AdditionalDetails : MonoBehaviour
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+        
         if (Physics.Raycast(ray, out hit, 3)){
+            GameObject go = hit.collider.gameObject;
             if (Input.GetKeyDown(KeyCode.E))
             {   
                 if (GamePaused)
                 {
-                    Resume();
+                   Resume();
                 }else
                 {
-                    Pause();
+                   Pause();
                 }
             }
         }
