@@ -6,14 +6,9 @@ using UnityEngine;
 public class InfoManager : MonoBehaviour
 {
     const float SPEED = 6f;
-    [SerializeField]
-    Transform InfoBox;
-    
-
+    [SerializeField] Transform InfoBox;
     Vector3 ChangedScale = Vector3.zero;
 
-
-    // Update is called once per frame
     void Update()
     {
         InfoBox.localScale = Vector3.Lerp(InfoBox.localScale,ChangedScale, Time.deltaTime * SPEED);

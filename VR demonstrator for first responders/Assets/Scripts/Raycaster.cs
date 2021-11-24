@@ -18,13 +18,12 @@ public class Raycaster : MonoBehaviour
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
-        
+
 
         if (Physics.Raycast(ray, out hit, 5)) {
             Debug.DrawLine (ray.origin, hit.point, Color.red);
-            //print(hit.collider.gameObject.name);
-            //RaycastObj = hit.collider.gameObject;
             GameObject go = hit.collider.gameObject;
+
             if (go.CompareTag("Interactable")){
                 OpenInfo(go.GetComponent<InfoManager>());
                 OpenDetail(go.GetComponent<DetailsManager>());
@@ -35,9 +34,6 @@ public class Raycaster : MonoBehaviour
             Debug.DrawLine (ray.origin, ray.origin + ray.direction * 10, Color.blue);
             CloseAll();
         }
-       
-    
-
     }
     void OpenInfo(InfoManager desiredInfo){
         foreach (InfoManager info in infos) {
@@ -58,7 +54,6 @@ public class Raycaster : MonoBehaviour
         }
 
     }
-
     void OpenDetail(DetailsManager desiredDetail){
         foreach (DetailsManager detail in details) {
             if (detail == desiredDetail){

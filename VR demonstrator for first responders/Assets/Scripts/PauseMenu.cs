@@ -8,11 +8,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pasueMenuUI;
     public GameObject mainUI;
-    
-    // Start is called before the first frame update
- 
 
-    // Update is called once per frame
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

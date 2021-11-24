@@ -11,8 +11,6 @@ public class FaceCamera : MonoBehaviour
     {
         cam = Camera.main.transform;
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.LookAt(cam);

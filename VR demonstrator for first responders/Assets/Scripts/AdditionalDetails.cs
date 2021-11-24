@@ -8,7 +8,7 @@ public class AdditionalDetails : MonoBehaviour
 
     public GameObject detailsUI;
     public GameObject mainUI;
-    // Start is called before the first frame update
+
   public void Update()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
