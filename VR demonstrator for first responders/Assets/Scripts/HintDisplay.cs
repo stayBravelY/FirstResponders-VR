@@ -16,9 +16,14 @@ public class HintDisplay : MonoBehaviour
 
             GameObject go = hit.collider.gameObject;
             var pick = go.GetComponentInChildren<PickUp>();
+            var canvas = go.GetComponentInChildren<DetailsManager>();
             
             if (go.CompareTag("Interactable")){
-                Hint.SetActive(true);
+                if (canvas != null)
+                {
+                   Hint.SetActive(true); 
+                }
+                
                 if (pick != null)
                 {
                     Pick.SetActive(true);
