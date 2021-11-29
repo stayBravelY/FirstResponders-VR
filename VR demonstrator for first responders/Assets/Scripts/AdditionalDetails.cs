@@ -12,8 +12,8 @@ public class AdditionalDetails : MonoBehaviour
   public void Update()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+     
         RaycastHit hit;
-        
         if (Physics.Raycast(ray, out hit, 3)){
             GameObject go = hit.collider.gameObject;
             if (Input.GetKeyDown(KeyCode.E))

@@ -10,8 +10,9 @@ public class PickUp : MonoBehaviour
     
     void OnMouseDown() {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+      
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3)){
+        if (Physics.Raycast(ray, out hit, 1)){
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Rigidbody>().useGravity = false;
         this.transform.position = pick.position;

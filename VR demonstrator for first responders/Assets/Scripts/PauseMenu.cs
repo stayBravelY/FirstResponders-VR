@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GamePaused = false;
@@ -19,12 +19,12 @@ public class PauseMenu : MonoBehaviour
                 Resume();
             }else
             {   
-               // Cursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.Locked;
                 Pause();
             }
         }
        
-            Cursor.lockState = CursorLockMode.Locked;
+         Cursor.lockState = CursorLockMode.Locked;
 
     }
    public void Resume()
@@ -46,5 +46,10 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("QUIT");
         Application.Quit();
+    }
+    public void LoadMenu()
+    {
+        Debug.Log("Loading...");
+        SceneManager.LoadScene("Menu");
     }
 }

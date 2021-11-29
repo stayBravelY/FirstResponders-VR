@@ -20,8 +20,9 @@ public class InteractionManager : MonoBehaviour
             _selection = null;
             objectname.text = null;
         }
-
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = new Ray(transform.position, transform.forward);
+        //RaycastHit hit;
+        //var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 7)){
             var selection = hit.transform;

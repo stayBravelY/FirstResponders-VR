@@ -20,7 +20,7 @@ public class Raycaster : MonoBehaviour
         RaycastHit hit;
 
 
-        if (Physics.Raycast(ray, out hit, 5)) {
+        if (Physics.Raycast(ray, out hit, 3)) {
             Debug.DrawLine (ray.origin, hit.point, Color.red);
             GameObject go = hit.collider.gameObject;
 
