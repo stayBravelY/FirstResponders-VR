@@ -8,23 +8,23 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pasueMenuUI;
     public GameObject mainUI;
-
+    public GameObject Player;
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {   
             if (GamePaused)
             {
-                Cursor.lockState = CursorLockMode.None;
+                //Cursor.lockState = CursorLockMode.None;
                 Resume();
             }else
             {   
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.lockState = CursorLockMode.Locked;
                 Pause();
             }
         }
        
-         Cursor.lockState = CursorLockMode.Locked;
+         //Cursor.lockState = CursorLockMode.Locked;
 
     }
    public void Resume()
@@ -33,14 +33,17 @@ public class PauseMenu : MonoBehaviour
         mainUI.SetActive(true);
         Time.timeScale = 1f;
         GamePaused = false;
-    
+        Cursor.lockState = CursorLockMode.Locked;
+        Player.GetComponentInChildren<MouseLook>().enabled = true;
     }
-    public void Pause()
+    void Pause()
     {
         pasueMenuUI.SetActive(true);
         mainUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Player.GetComponentInChildren<MouseLook>().enabled = false;
     }
     public void QuitGame()
     {
