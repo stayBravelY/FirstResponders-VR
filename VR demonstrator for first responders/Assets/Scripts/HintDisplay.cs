@@ -14,7 +14,7 @@ public class HintDisplay : MonoBehaviour
         
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;//RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3)){
+        if (Physics.Raycast(ray, out hit, 4)){
 
             GameObject go = hit.collider.gameObject;
            
@@ -27,7 +27,7 @@ public class HintDisplay : MonoBehaviour
                 }
              }   
                
-        if (Physics.Raycast(ray, out hit, 1))
+        if (Physics.Raycast(ray, out hit, 2))
             {
             GameObject pickable = hit.collider.gameObject;
             var pick = pickable.GetComponentInChildren<PickUp>();
