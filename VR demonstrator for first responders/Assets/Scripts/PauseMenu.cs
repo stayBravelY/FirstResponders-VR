@@ -38,12 +38,14 @@ public class PauseMenu : MonoBehaviour
     }
     void Pause()
     {
+        if(Time.timeScale != 0){
         pasueMenuUI.SetActive(true);
         mainUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
         Cursor.lockState = CursorLockMode.None;
         Player.GetComponentInChildren<MouseLook>().enabled = false;
+        }
     }
     public void QuitGame()
     {
