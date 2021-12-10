@@ -34,7 +34,7 @@ public class AdditionalDetails : MonoBehaviour
         mainUI.SetActive(true);
         Time.timeScale = 1f;
         GamePaused = false;
-    
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void Pause()
     {
@@ -42,5 +42,6 @@ public class AdditionalDetails : MonoBehaviour
         mainUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
